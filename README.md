@@ -1,5 +1,5 @@
 # PLATFORMER
  
-https://lmazenc34070.github.io/PLATFORMER/
+https://lmazenc34070.github.io/platformer2/
 
-http://localhost/PLATFORMER
+http://localhost/platformer2

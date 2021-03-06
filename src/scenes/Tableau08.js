@@ -2,7 +2,7 @@ class Tableau08 extends Tableau{
 
     preload() {
         super.preload();
-        this.load.image('platforms', 'assets/platforms.png');
+        this.load.image('platforms', 'assets/Platforms.png');
         this.load.image('star', 'assets/herisson.png');
         this.load.image('ground', 'assets/groundpt.png');
         this.load.image('sky-2', 'assets/Front-three.png');
