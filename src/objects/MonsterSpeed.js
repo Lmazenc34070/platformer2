@@ -14,7 +14,6 @@ class Speed extends ObjetEnnemi{
         this.setCollideWorldBounds(true);
         this.setVelocityX(300);
         this.setDepth(10);
-
         this.body.allowGravity=false;
 
         // X

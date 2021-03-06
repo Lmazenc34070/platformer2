@@ -7,7 +7,7 @@ class Tableau08 extends Tableau{
         this.load.image('ground', 'assets/groundpt.png');
         this.load.image('sky-2', 'assets/Front-three.png');
         this.load.image('sky-3', 'assets/Back_three.png');
-        this.load.image('tarsal', 'assets/Monstre2.png');
+        this.load.image('tarsal', 'assets/MonstreB.png');
         this.load.image('spoink', 'assets/MonstreR.png');
         this.load.image('deoxys', 'assets/monstreV.png');
     }
@@ -74,17 +74,6 @@ class Tableau08 extends Tableau{
         new Speed(this,2200,height-80);
 
         this.physics.add.collider(this.platforms, this.stars);
-        //quelques étoiles et plateformes qui vont avec
-        // this.stars=this.physics.add.group();
-        // this.platforms=this.physics.add.staticGroup();
-        // for(let posX=20;posX<largeurDuTableau;posX+=100){
-        //     let etoileY=350+Math.sin(posX)*100;
-        //     let star=this.stars.create(posX ,etoileY,"star");
-        //     star.body.allowGravity=false;
-        //     let plate=this.platforms.create(posX ,etoileY+50,"ground");
-        //     plate.setDisplaySize(60,10);
-        //     plate.refreshBody();
-        // }
 
         this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, null, this);
         this.physics.add.collider(this.player,this.platforms);
