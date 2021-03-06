@@ -20,6 +20,7 @@ class Tableau extends Phaser.Scene{
         this.load.image('boom', 'assets/Boom.png');
         this.load.audio('mobDeath', 'assets/cri.ogg');
         this.load.audio('getItem', 'assets/poire.ogg');
+        this.load.audio('back', 'assets/SongGame.ogg');
         this.load.spritesheet('player',
             'assets/player2.png',
             { frameWidth: 32, frameHeight: 48  }
@@ -30,6 +31,8 @@ class Tableau extends Phaser.Scene{
         this.sys.scene.scale.lockOrientation("landscape")
         this.sound.add('mobDeath');
         this.sound.add('getItem');
+        this.mood = this.sound.add('back')
+        this.mood.play();
         console.log("On est sur "+this.constructor.name+" / "+this.scene.key);
         /**
          * Le ciel en fond
@@ -146,8 +149,10 @@ class Tableau extends Phaser.Scene{
             }else{
                 //le joueur est mort
                 if(!me.player.isDead){
+                    this.mood.stop();
                     me.player.isDead=true;
                     me.player.visible=false;
+
                     //ça saigne...
                     me.saigne(me.player,function(){
                         //à la fin de la petite anim, on relance le jeu
@@ -186,6 +191,7 @@ class Tableau extends Phaser.Scene{
      */
     win(){
         Tableau.suivant();
+        this.mood.stop();
     }
 
     /**

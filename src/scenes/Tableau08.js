@@ -8,7 +8,6 @@ class Tableau08 extends Tableau{
         this.load.image('sky-2', 'assets/Front-three.png');
         this.load.image('sky-3', 'assets/Back_three.png');
         this.load.image('tarsal', 'assets/Monstre2.png');
-        this.load.audio('back', 'assets/SongGame.ogg');
         this.load.image('spoink', 'assets/MonstreR.png');
         this.load.image('deoxys', 'assets/monstreV.png');
     }
@@ -22,7 +21,6 @@ class Tableau08 extends Tableau{
         this.physics.world.setBounds(0, 0, largeurDuTableau,  hauteurDuTableau);
 
         this.cameras.main.startFollow(this.player, false, 0.05, 0.05);
-        this.sound.play('back');
 
         for(let i=0 ;i<=2;i++){
             let ground=this.physics.add.sprite(i*896,384,"ground");
