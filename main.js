@@ -10,12 +10,12 @@ let config = {
         default: 'arcade',
         arcade: {
             gravity: { y: 100*3 },
-            debug: true,
+            debug: false,
         }
     },
     scene: [
         new Ui(),
-        new Tableau08("C'est beau hein ?"),
+        new Tableau08("1er niveau"),
         new TableauZoo("Le zoo ! (Chrysacier va pas tarder)"),
         new Tableau06("Un Dracaufeu sauvage, attention !"),
         new Tableau05("Extend un tableau noir"),
